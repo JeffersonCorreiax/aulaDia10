@@ -1,4 +1,5 @@
 const path = require("path");
+const { send } = require("process");
 const RegisterController = {
     index : (req, res) => {
         res.sendFile(path.join(__dirname, "../../public/html/cadastro.html"));
@@ -6,8 +7,8 @@ const RegisterController = {
     
     cadastro : (req, res) => {
        
-        
-    console.log(req.body);
+        console.log(req.body);
+        res.send("Funcionou");
     }
 }
 

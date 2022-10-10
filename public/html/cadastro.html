@@ -48,7 +48,7 @@
         <div class="container-register">
             <div class="container-signin">
                 <h2>Ainda não é<br>cadastrado?</h2>
-                <form class="signin-form" action="/Register" method="POST">
+                <form class="signin-form" action="/Register" method="POST" enctype="multipart/form-data">
                     
                     <input  type="text" id="form-input" placeholder="Nome:" required>
                     <input type="email" id="form-input" placeholder="E-mail:" required>
@@ -56,7 +56,7 @@
                     <input type="password" id="form-input" placeholder="Senha:" required>
                     <input type="number" id="form-input"placeholder="Tel:"  required>
                     <input type="adress" id="form-input" placeholder="Endereço:"  required>
-                    <input type="adressnumber" id="form-input" placeholder="Nº:" required>
+                    <input type="file" id="form-input" name="userImage"prequired>
                     <input type="number" id="form-input" placeholder="Cep:"  required>
                     <button class="signin-button" Type="submit">Cadastrar</button>
                 </form>
