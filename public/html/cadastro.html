@@ -48,7 +48,7 @@
         <div class="container-register">
             <div class="container-signin">
                 <h2>Ainda não é<br>cadastrado?</h2>
-                <form class="signin-form" action="#">
+                <form class="signin-form" action="/Register" method="POST">
                     
                     <input  type="text" id="form-input" placeholder="Nome:" required>
                     <input type="email" id="form-input" placeholder="E-mail:" required>
@@ -68,9 +68,9 @@
                 <img id="login-img" src="../img/cadastro_perfil.png" alt="Perfil do usuario">
                 
             </div>
-                <form class="login-form" action="#">
-                    <input id="login-input" type="text" placeholder="E-mail:"required>
-                    <input id="login-input" type="number" placeholder="Senha:"  required>
+                <form class="login-form" action="/Login" method="POST">
+                    <input id="login-input" type="text" placeholder="E-mail:" name="login" required>
+                    <input id="login-input" type="number" placeholder="Senha:" name="senha"  required>
                     <button class="login-button" Type="submit">Login</button>
                 </form>
             </div>

@@ -5,6 +5,7 @@ const LoginController = require('../controllers/LoginControllers');
 
 
 router.get('/Login', LoginController.index);
+router.post('/Login', LoginController.login);
 
 
 

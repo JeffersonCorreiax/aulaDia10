@@ -11,6 +11,10 @@ const routeRegister = require('./src/routes/routeRegister');
 
 let app = express();
 const path = require('path');
+app.use(express.json());
+app.use(express.urlencoded({ extended: false}));
+
+
 
 app.use('/', routeAbout);
 app.use('/', routeHome);
