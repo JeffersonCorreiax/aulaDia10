@@ -1,5 +1,7 @@
 const express = require("express");
+
 const multer = require('multer');
+
 const routeAbout = require("./src/routes/routeAbout");
 const routeHome = require("./src/routes/routeHome");
 const routeGames = require("./src/routes/routeGames");
@@ -10,9 +12,16 @@ const routeCart = require("./src/routes/routeCart");
 const routeLogin = require("./src/routes/routeLogin");
 const routeRegister = require('./src/routes/routeRegister');
 
+ // toda vez que for requerer um arquivo e colocar o '/' já irá pra pasta public
+
+
+
 let app = express();
+
 const path = require('path');
+
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: false}));
 
 
@@ -38,13 +47,15 @@ app.use('/', routePayment);
 app.use('/', routeCart);
 app.use('/', routeLogin);
 app.use('/', upload.single('userImage'), routeRegister);
-app.use(express.static(path.join(__dirname, '/public')));
 
 
+app.use(express.static(path.join(__dirname, '..', 'public')));
+
+
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/src/views');
 
 ///////MIDDLEWARES
-
-
 
     
 
